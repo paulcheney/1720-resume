@@ -1,0 +1,29 @@
+@media only screen and (min-width: 32rem) {
+  /*  ----------------------- NAVIGATION --------------------------- */
+  nav ul {
+    span {
+      display: block;
+    }
+    img {
+      display: none;
+    }
+
+    li a {
+      height: 100%;
+      display: block;
+      padding: 0.8rem 0;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+
+  /*----- COLUMNS -----*/
+  div.row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

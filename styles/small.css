@@ -1,0 +1,256 @@
+/* -------------- COLOR SCHEME --------------- */
+:root {
+  --color1: #b5a75b;
+  --color2: #76b55b;
+  --color3: #5bb58c;
+  --color4: #5b91b5;
+  --color5: #715bb5;
+  --color6: #b55bac;
+  --color7: #b55b5f;
+
+  /* Add a grey scale Colors */
+  --color-mygrey-05: lab(98% 0 0);
+  --color-mygrey-10: lab(97% 0 0);
+  --color-mygrey-20: lab(91% 0 0);
+  --color-mygrey-30: lab(85% 0 0);
+  --color-mygrey-40: lab(66% 0 0);
+  --color-mygrey-50: lab(48% 0 0);
+  --color-mygrey-60: lab(34% 0 0);
+  --color-mygrey-70: lab(27% 0 0);
+  --color-mygrey-80: lab(15% 0 0);
+  --color-mygrey-90: lab(8% 0 0);
+  --color-mygrey-95: lab(3% 0 0);
+}
+
+/************************** BORDER BOX **************************/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/************************** BODY **************************/
+body {
+  font-family: "Spline Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--color-mygrey-90);
+  span {
+    display: none;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    list-style-type: none;
+    width: 100%;
+  }
+  ul li a {
+    display: block;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul li a img {
+    width: 25px;
+  }
+  ul li.active a {
+    background: var(--color-mygrey-70);
+  }
+
+  ul li a:hover {
+    background: var(--color-mygrey-50);
+  }
+}
+
+/* MAIN STUFF GOES HERE  */
+main section {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 10px;
+  color: white;
+  min-height: 100vh;
+}
+h1 {
+  margin: 4rem 0 0 0;
+  padding: 0;
+  font-size: 3rem;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+p {
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+img.hero {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+section:nth-child(1) {
+  background-color: var(--color1);
+}
+section:nth-child(2) {
+  background-color: var(--color2);
+}
+section:nth-child(3) {
+  background-color: var(--color3);
+}
+section:nth-child(4) {
+  background-color: var(--color4);
+}
+section:nth-child(5) {
+  background-color: var(--color5);
+}
+section:nth-child(6) {
+  background-color: var(--color6);
+}
+
+/*----- COLUMNS -----*/
+div.row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* card1 layout */
+.card1 {
+  margin: 1rem 1vw;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: transform .3s ease;
+}
+.card1:hover {
+  transform: translateY(-5px);
+}
+.card1 h6 {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.card1 p {
+  padding: 0;
+  margin: 1rem 5%;
+  line-height: 140%;
+  font-size: 0.9rem;
+}
+
+.card1 img.full {
+  display: block;
+  margin: 0;
+  width: 100%;
+  margin: 0 0 0.7rem 0;
+}
+.card1 img.reg {
+  display: block;
+  margin: 0;
+  width: 90%;
+  margin: 0.7rem 5%;
+}
+.card1 a {
+  display: block;
+  margin: 1rem 10px;
+  padding: 1rem 0;
+  border-radius: 25px;
+  border: solid rgba(255, 255, 255, 0.4) 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: background-color .3s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ----------------- STYLE THE FORM ----------------- */
+form {
+  label {
+    display: block;
+    margin-top: 2rem;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 90%;
+    padding: 1rem 2%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #333;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+  }
+  input:autofill,
+  input:-webkit-autofill {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  input[type="submit"] {
+    margin-top: 1rem;
+    border-radius: 25px;
+    width: 250px;
+    color: white;
+  }
+}
+
+/*   STYLE THE SOCIAL LINKS */
+div.social {
+  display: flex;
+
+  
+}
+div.social a {
+  display: block;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: .5rem;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: rgba(0,0, 0,0.1);
+  }
+}
+div.social img {
+  height: 30px;
+}
+
+/* FOOTER  */
+#footerWrapper {
+  background-color: #1b1b1b;
+}
+footer {
+  font-size: 0.85rem;
+  padding: 1rem 0;
+  color: #bbb;
+  text-align: center;
+  a {
+    color: #eee;
+  }
+}

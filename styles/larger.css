@@ -1,0 +1,40 @@
+@media only screen and (min-width: 65rem) {
+  body {
+    display: grid;
+    grid-template-columns: 250px auto;
+  }
+
+  nav {
+    grid-row: 1 / span 9;
+  }
+  nav ul {
+    margin: 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    width: 250px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav ul li {
+    padding: 1rem 1rem;
+    width: 100%;
+  }
+  nav ul li a {
+    padding: 0.5rem 1rem;
+    text-align: right;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  }
+  nav ul li.active a {
+    background: linear-gradient(
+      90deg,
+      var(--color-mygrey-50) 0%,
+      var(--color-mygrey-80) 100%
+    );
+  }
+
+  /*----- COLUMNS -----*/
+  div.row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} /* end media query */
