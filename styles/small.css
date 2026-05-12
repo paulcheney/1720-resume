@@ -1,5 +1,17 @@
 /* -------------- COLOR SCHEME --------------- */
 :root {
+    /* Add a Transparent Colors */
+    --color-trans10: rgba(255, 255, 255, 0.1);
+    --color-trans20: rgba(255, 255, 255, 0.2);
+    --color-trans30: rgba(255, 255, 255, 0.3);
+    --color-trans40: rgba(255, 255, 255, 0.4);
+    --color-trans50: rgba(255, 255, 255, 0.5);
+    --color-trans60: rgba(255, 255, 255, 0.6);
+    --color-trans70: rgba(255, 255, 255, 0.7);
+    --color-trans80: rgba(255, 255, 255, 0.8);
+    --color-trans90: rgba(255, 255, 255, 0.9);
+
+    /* Add a section Colors */
   --color1: #b5a75b;
   --color2: #76b55b;
   --color3: #5bb58c;
@@ -93,7 +105,7 @@ h2 {
 p {
   margin: 0;
   padding: 0;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   line-height: 150%;
 }
@@ -134,7 +146,14 @@ div.row {
   grid-template-columns: 1fr;
 }
 
-/* card1 layout */
+/* tab layout */
+.tab {
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid var(--)
+}
+
+/* ----------------- CARD 1 LAYOUT ----------------- */
 .card1 {
   margin: 1rem 1vw;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -159,17 +178,11 @@ div.row {
   font-size: 0.9rem;
 }
 
-.card1 img.full {
+.card1 img {
   display: block;
   margin: 0;
-  width: 100%;
-  margin: 0 0 0.7rem 0;
-}
-.card1 img.reg {
-  display: block;
-  margin: 0;
-  width: 90%;
-  margin: 0.7rem 5%;
+  width: 96%;
+  margin: 0.7rem 2%;
 }
 .card1 a {
   display: block;
@@ -189,6 +202,42 @@ div.row {
     background-color: rgba(0, 0, 0, 0.1);
   }
 }
+
+/* ----------------- CARD 2 LAYOUT ----------------- */
+.card2 {
+  margin: 1rem 1vw;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: transform .3s ease;
+  background-color: var(--color-trans30);
+}
+.card2:hover {
+  transform: translateY(-5px);
+}
+.card2 h3 {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-mygrey-90)
+}
+.card2 img {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.card2 p {
+  padding: 0;
+  margin: 1rem 5%;
+  line-height: 140%;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--color-mygrey-90)
+}
+
+
 
 /* ----------------- STYLE THE FORM ----------------- */
 form {
