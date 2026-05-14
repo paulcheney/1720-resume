@@ -96,17 +96,20 @@ h1 {
   margin: 4rem 0 0 0;
   padding: 0;
   font-size: 3rem;
+  font-weight: 400;
 }
 h2 {
   margin: 0;
   padding: 0;
   font-size: 2rem;
+  font-weight: 300;
 }
 p {
   margin: 0;
   padding: 0;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  font-weight: 200;
   line-height: 150%;
 }
 img.hero {
@@ -148,11 +151,21 @@ div.row {
 
 /* tab layout */
 .tab {
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid var(--)
+  border-left: 6px solid var(--color-trans50);
+  margin: 1rem 0;
 }
 
+.tab h3 {
+  margin: .2rem 0 0 .2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  span {float: right;}
+}
+.tab p {
+  margin: .2rem 0 0 .2rem;
+  font-size: 1rem;
+  font-weight: 200;
+}
 /* ----------------- CARD 1 LAYOUT ----------------- */
 .card1 {
   margin: 1rem 1vw;

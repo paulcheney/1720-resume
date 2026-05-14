@@ -33,6 +33,11 @@
     );
   }
 
+  /* MAIN STUFF GOES HERE  */
+main section {
+  padding: 1rem 10px;
+
+}
   /*----- COLUMNS -----*/
   div.row {
     grid-template-columns: 1fr 1fr 1fr;
